@@ -3,11 +3,11 @@ function simular(){
   var prazo = document.getElementById("prazoaa").valueAsNumber;
   var jurosaa = document.getElementById("jurosaa").valueAsNumber;
   var prazoam = prazo * 12;
-  var jurosam = ((1+jurosaa)**(1/2))-1;
+  var jurosam = ((1+(jurosaa/100))**(1/12))-1;
   amortizacao = valor / prazoam;
 
   document.getElementById("prazoam").valueAsNumber = prazoam;
-  document.getElementById("jurosam").valueAsNumber = jurosam;
+  document.getElementById("jurosam").valueAsNumber = jurosam * 100;
 
   var tbody = document.querySelector("tbody");
   var jurosTotal = 0;
@@ -17,7 +17,7 @@ function simular(){
     jurosTotal += jurosPrestacao;
     
     if(i<5){
-      var totalPrestacao = saldoDevedor + amortizacao;
+      var totalPrestacao = jurosPrestacao + amortizacao;
       var tr = tbody.children[i];
       tr.children[1].textContent = amortizacao.toFixed(2);
       tr.children[2].textContent = jurosPrestacao.toFixed(2);
@@ -27,4 +27,3 @@ function simular(){
   document.getElementById("jurosTotal").valueAsNumber = jurosTotal.toFixed(2);
 
 }
-
