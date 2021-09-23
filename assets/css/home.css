@@ -33,11 +33,28 @@ fieldset{
 fieldset.grupo .campo{
   float: left;
 }
+table{
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+table tr td{
+  background-color: #f8f8f8;
+  border: 1px solid rgb(92, 92, 92);
+}
 .resultado td{
-  width: 120px;
+  padding-right: 0.22 rem;
+  padding-left: 3px;
+}
+table tbody{
+  font-size: 0.75rem;
+}
+table thead{
+  font-size: 0.85rem;
 }
 .resultado .headerResultado{
   font-weight: bold;
   color: var(--blue);
 }
+
 

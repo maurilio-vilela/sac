@@ -31,7 +31,7 @@ body, button, input, textarea{
 }
 .content{
   background-color: var(--background);
-  max-width: 75vw;
+  max-width: 90vw;
   min-height: 80vh;
 }
 input, button, .button{
