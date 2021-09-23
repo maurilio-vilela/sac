@@ -23,7 +23,7 @@ body{
   height: 100vh;
   background-color: var(--light-blue);
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 body, button, input, textarea{
   font-size: clamp(12px, 1.0rem, 2vw);

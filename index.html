@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Simulador de Financiamento - Sistema de Amortizações
-      Constantes (SAC)</title>
+    <title>Simulador de Financiamentos</title>
     <meta charset="utf-8"  >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- View Port -->
@@ -25,7 +24,6 @@
     <main class="content">
       <section>
         <h2>Simulação de financiamento</h2>
-        <form action="">
           <fieldset class="grupo">
             <div class="campo">
               <label for="valor">Valor</label>
@@ -42,44 +40,74 @@
               <input type="number" id="jurosaa" value="0.08" step=".01"required/>
             </div>
           </fieldset>
-          <button id="btn">Simular</button>
-        </form> 
+          <button onclick="simular()">Simular</button>
 
         <h2>Resultado</h2>
-        <form>
+
           <fieldset class="grupo">
             <div class="campo">
               <label class="form-label" for="prazoam">Prazo (meses)</label>
-              <input id="prazoam" type="number" disabled/>
+              <input id="prazoam" type="number" readonly disabled/>
             </div>
             <div class="campo">
               <label class="form-label" for="jurosam">Juros ao mês (%)</label>
-              <input id="jurosam" type="number" step=".01" disabled/>
+              <input id="jurosam" type="number" step=".01" readonly disabled/>
             </div>
             <div class="campo">
               <label class="form-label" for="jurosTotal">Juros acumulados (R$)</label>
-              <input id="jurosTotal" type="number" step=".01" disabled/>
+              <input id="jurosTotal" type="number" step=".01" readonly disabled/>
             </div>
           </fieldset>
-        </form>
+
         <table class="resultado">
-          <tr class="headerResultado">
+          <thead>
+            <tr class="headerResultado">
               <td>Prestação</td>
               <td>Amortização</td>
               <td>Juros</td>
               <td>Total</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>833</td>
-            <td>1230</td>
-            <td>2063</td>
-          </tr>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
 
+            <tr>
+              <td>2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
         </table>
       </section>
     </div>
     </main>
- 
+    <script defer src="./assets/js/script.js" ></script>
   </body>
 </html>
