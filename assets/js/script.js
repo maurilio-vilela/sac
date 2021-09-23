@@ -19,9 +19,9 @@ function simular(){
     if(i<5){
       var totalPrestacao = jurosPrestacao + amortizacao;
       var tr = tbody.children[i];
-      tr.children[1].textContent = amortizacao.toFixed(2);
-      tr.children[2].textContent = jurosPrestacao.toFixed(2);
-      tr.children[3].textContent = totalPrestacao.toFixed(2);
+      tr.children[1].textContent = amortizacao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });;
+      tr.children[2].textContent = jurosPrestacao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });;
+      tr.children[3].textContent = totalPrestacao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });;
     }
   }
   document.getElementById("jurosTotal").valueAsNumber = jurosTotal.toFixed(2);
